@@ -1,4 +1,4 @@
-package player.model;
+package com.cricketcraze.player.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,6 +20,22 @@ public class Player {
 	
 	@Column (name = "playerName")
 	private String playerName;
+
+	public String getPlayerName() {
+		return this.playerName;
+	}
+
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
+	}
+
+	public Player(){}
+
+	public Player(PlayerForm form){
+		this.playerName=form.getPlayerName();
+	}
 	
 }
+
+//ctrl + shift + P -> generate getter and setters
 
